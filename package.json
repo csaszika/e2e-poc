@@ -4,10 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
+    "nx-gen-app": "nx generate @nrwl/angular:application nrwl",
+    "nx-gen-lib": "nx generate @nrwl/angular:lib common-logic",
     "postinstall": "node ./decorate-angular-cli.js",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "e2e-maxim": "nx e2e maximbet-e2e --watch",
+    "e2e-nrwl": "nx e2e nrwl-e2e"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +36,9 @@
     "@angular/cli": "~14.2.0",
     "@angular/compiler-cli": "~14.2.0",
     "@angular/language-service": "~14.2.0",
+    "@badeball/cypress-cucumber-preprocessor": "^13.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@cucumber/cucumber": "^8.7.0",
     "@nrwl/cli": "15.0.10",
     "@nrwl/cypress": "15.0.10",
     "@nrwl/eslint-plugin-nx": "15.0.10",
@@ -42,7 +49,10 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
+    "cucumber": "^6.0.7",
+    "cucumber-html-reporter": "^5.5.0",
     "cypress": "^10.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
@@ -54,5 +64,8 @@
     "ts-jest": "28.0.5",
     "ts-node": "10.9.1",
     "typescript": "~4.8.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "**/*.steps.ts"
   }
 }

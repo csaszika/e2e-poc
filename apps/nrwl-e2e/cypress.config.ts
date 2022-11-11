@@ -19,7 +19,7 @@ export default defineConfig({
   },
   e2e: {
     ...nxE2EPreset(__dirname),
-    baseUrl: 'https://qaautomationlabs.com/',
+    baseUrl: 'https://nx.dev/',
     specPattern: './src/integration/*.feature',
     async setupNodeEvents(
       on: Cypress.PluginEvents,

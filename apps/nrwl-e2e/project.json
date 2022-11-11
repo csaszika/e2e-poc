@@ -1,18 +1,18 @@
 {
-  "name": "maximbet-e2e",
+  "name": "nrwl-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/maximbet-e2e/src",
+  "sourceRoot": "apps/nrwl-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/maximbet-e2e/cypress.config.ts",
+        "cypressConfig": "apps/nrwl-e2e/cypress.config.ts",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "maximbet:serve:production"
+          "devServerTarget": "nrwl:serve:production"
         }
       }
     },
@@ -20,10 +20,9 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/maximbet-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/nrwl-e2e/**/*.{js,ts}"]
       }
     }
   },
-  "tags": [],
-  "implicitDependencies": ["maximbet"]
+  "tags": []
 }

@@ -1,0 +1,19 @@
+{
+  "name": "common-logic",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/common-logic/src",
+  "prefix": "e2e-poc",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/common-logic/**/*.ts",
+          "libs/common-logic/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
